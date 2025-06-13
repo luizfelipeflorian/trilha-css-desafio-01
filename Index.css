@@ -1,3 +1,225 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonte base e cores */
 body {
-    background-color: aqua;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: #f9f9f9;
+  line-height: 1.6;
+}
+
+/* Cabeçalho - banner */
+.banner {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.banner-content {
+  max-width: 900px;
+}
+
+.banner .logo img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.banner h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.banner p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner button {
+  background-color: #ff6f61;
+  border: none;
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.banner button:hover {
+  background-color: #e55b50;
+}
+
+/* Main */
+main {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+/* Seção O que vou aprender */
+#course-content {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+#course-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #2575fc;
+  font-weight: 700;
+}
+
+#course-content p {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.modules-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.module {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+  padding: 25px 30px;
+  width: 260px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.module span {
+  color: #2575fc;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.module:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgb(37 117 252 / 0.3);
+}
+
+/* Seção Transforme o mundo */
+#transform-world {
+  background: #2575fc;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border-radius: 12px;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+/* Seção desafios profissionais */
+#professional-challenges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+#professional-challenges h2 {
+  flex-basis: 100%;
+  font-size: 2rem;
+  color: #2575fc;
+  margin-bottom: 25px;
+  font-weight: 700;
+  text-align: center;
+}
+
+#professional-challenges img {
+  flex: 1 1 400px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
+}
+
+#professional-challenges p {
+  flex: 1 1 400px;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #eee;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+footer .dio-logo {
+  width: 140px;
+  filter: brightness(0) invert(1);
+}
+
+footer a {
+  color: #ff6f61;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .banner h1 {
+    font-size: 2.2rem;
+  }
+
+  .banner p {
+    font-size: 1rem;
+  }
+
+  .modules-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #professional-challenges {
+    flex-direction: column;
+  }
+
+  #professional-challenges p {
+    text-align: center;
+  }
 }
